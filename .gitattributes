@@ -1,0 +1,4 @@
+
+* linguist-vendored
+*.rb linguist-vendored=false
+
