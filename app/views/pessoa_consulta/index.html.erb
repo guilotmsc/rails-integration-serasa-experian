@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Consulta 
+            </header> 
+            <div class="panel-body">
+            <div class="adv-table">
+            <%= link_to 'Gerar nova pesquisa', get_negative_pessoa_consultum_path, :class => 'btn btn-primary' %> 
+
+            <table  class="display table table-bordered table-striped" id="dynamic-table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Documento</th>
+                <th>Nome</th>
+                <th>Ocorrencias</th>
+                <th>Pend. Internas</th> 
+                <th>Pend. Financeiras</th> 
+                <th>Pend. Bacen</th>
+            </tr>
+            </thead>
+            <tbody>
+              <% @pessoa_consulta.each do |c| %>
+                <tr class = "<%= cycle("cor1", "cor2") %>">
+                  <td><%= c.id.to_s.rjust(6,'0')%></td>
+                  <td><%= c.documento %></td>
+                  <td><%= c.nome %></td>
+                  <td><%= c.ocorrencias %></td> 
+                  <td><%= c.pend_inter %></td> 
+                  <td><%= c.pend_fin %></td>
+                  <td><%= c.pend_bacen %></td>
+                  <td><%= link_to 'Visualizar', pessoa_consultum %></td>
+                </tr>              
+              <% end %>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </section>
+  </div>
+</div>
+ 

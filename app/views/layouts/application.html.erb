@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="MaironBrasil">
+  <link rel="shortcut icon" href="/assets/details_open.png">
+  <title>Consulta Serasa</title> 
+    
+  <%= stylesheet_link_tag 'application' %>
+ 
+  <%= csrf_meta_tags %> 
+</head>
+  <body data-plus-as-tab="true">
+  	<section id="container" >
+<header class="header fixed-top clearfix">
+<!--logo start-->
+<div class="brand">
+
+  <a href="/menus" class="logo">
+      Consulta
+  </a>
+  <div class="sidebar-toggle-box">
+      <div class="fa fa-bars"></div>
+  </div>
+</div>
+<!--logo end-->
+
+  <div class="top-nav hr-top-nav">
+      <ul class="nav pull-right top-menu">
+          <!-- user login dropdown start-->
+          <li class="dropdown">
+              <a data-toggle="dropdown" class="dropdown-toggle user-login" href="#">
+                    
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu extended logout">
+                
+              </ul>
+          </li>
+          <!-- user login dropdown end -->
+      </ul>
+  </div>
+</header>
+<!--sidebar start-->
+  <aside>
+    <div id="sidebar" class="nav-collapse">
+      <!-- sidebar menu start-->
+      <div class="leftside-navigation">
+        <ul class="sidebar-menu" id="nav-accordion">
+          <li>
+            <a class="active" href="/pessoas">
+              <i class="fa fa-shopping-cart"></i>
+              <span>Consulta CPF</span>
+            </a>
+          </li> 
+
+        </ul>
+      </div>
+      <!-- sidebar menu end-->
+    </div>
+  </aside>
+  <section id="main-content" class="">
+    <section class="wrapper">
+      	<%= yield %>
+      </section>
+    </section>
+</section>
+
+    <%= javascript_include_tag 'application' %> 
+  </body>
+</html>

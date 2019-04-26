@@ -1,0 +1,3 @@
+<p>
+ 	<%= render partial: "/pessoa_consulta/index_consulta", locals: { pessoa_consultas: @pessoa.pessoa_consultum.order('ocorrencias desc, pend_fin desc, pend_inter desc, pend_bacen desc') } %>
+</p> 

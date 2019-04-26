@@ -1,0 +1,33 @@
+/*
+  *= require bs3/css/bootstrap.min
+  *= require bootstrap-reset
+  *= require clndr
+  *= require style
+  *= require style-responsive
+  *= require font-awesome/css/font-awesome
+  *= require bootstrap-submenu.min
+  *= require multi-select
+ */
+
+
+
+.tab_container{
+	padding: 5px;
+}
+.group h4{
+	padding: 5px;
+}
+
+.rolagem td {
+	padding: 5px;
+}
+
+.head_grid td {
+	padding: 5px;
+}
+
+.rolagem_cobro td {
+  padding: 5px;
+}
+
+input{ text-transform: uppercase; }

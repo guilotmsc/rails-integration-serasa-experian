@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-lg-12">
+      <section class="panel">
+          <header class="panel-heading">
+              Nova consulta
+          </header>
+          <div class="panel-body">
+              <div class="position-center">
+                <%= form_for(pessoa, html: {class: "form-horizontal", role: "form", multipart: true}) do |f| %>
+
+                  <% if pessoa.errors.any? %>
+                    <div id="error_explanation">
+                      <h2><%= pluralize(pessoa.errors.count, "error") %> prohibited this pessoa from being saved:</h2> 
+                      <ul>
+                      <% pessoa.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                      <% end %>
+                      </ul>
+                    </div>
+                  <% end %> 
+
+                  <div class="form-group">
+                    <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">Data</label>
+                    <div class="col-lg-10">
+                      <%= f.text_field :data, class: 'form-control', placeholder: "Data" %>
+                    </div>
+                  </div> 
+                  <div class="form-group">
+                    <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">Arquivo</label>
+                    <div class="col-lg-10">
+                      <%= f.file_field :excel, class: 'form-control', placeholder: "Arquivo" %>
+                    </div>
+                  </div>    
+                  <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10">
+                      <%= f.submit "   Salvar  ", :disable_with => "Aguarde...", :class => "btn btn-success" %>
+                    </div>
+                  </div>
+              <% end %>
+              </div>
+          </div>
+      </section>
+    </div>
+</div>
+

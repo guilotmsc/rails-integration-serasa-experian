@@ -1,0 +1,102 @@
+<%= form_with(model: pessoa_consultum, local: true) do |form| %>
+  <% if pessoa_consultum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pessoa_consultum.errors.count, "error") %> prohibited this pessoa_consultum from being saved:</h2>
+
+      <ul>
+      <% pessoa_consultum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :documento %>
+    <%= form.text_field :documento, id: :pessoa_consultum_documento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :pessoa_consultum_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome_mae %>
+    <%= form.text_field :nome_mae, id: :pessoa_consultum_nome_mae %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome_fantasia %>
+    <%= form.text_field :nome_fantasia, id: :pessoa_consultum_nome_fantasia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nascimento %>
+    <%= form.text_field :nascimento, id: :pessoa_consultum_nascimento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fundacao %>
+    <%= form.text_field :fundacao, id: :pessoa_consultum_fundacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :situacao_rfb %>
+    <%= form.text_field :situacao_rfb, id: :pessoa_consultum_situacao_rfb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao_rfb %>
+    <%= form.text_field :descricao_rfb, id: :pessoa_consultum_descricao_rfb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_situacao %>
+    <%= form.text_field :data_situacao, id: :pessoa_consultum_data_situacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ocorrencias %>
+    <%= form.number_field :ocorrencias, id: :pessoa_consultum_ocorrencias %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor_total %>
+    <%= form.text_field :valor_total, id: :pessoa_consultum_valor_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pend_inter %>
+    <%= form.number_field :pend_inter, id: :pessoa_consultum_pend_inter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pend_int_obs %>
+    <%= form.text_field :pend_int_obs, id: :pessoa_consultum_pend_int_obs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pend_fin %>
+    <%= form.number_field :pend_fin, id: :pessoa_consultum_pend_fin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pend_fin_obs %>
+    <%= form.text_field :pend_fin_obs, id: :pessoa_consultum_pend_fin_obs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pend_bacen %>
+    <%= form.number_field :pend_bacen, id: :pessoa_consultum_pend_bacen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pend_bacen_obs %>
+    <%= form.text_field :pend_bacen_obs, id: :pessoa_consultum_pend_bacen_obs %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

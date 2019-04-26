@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @pessoa_consultum.documento %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @pessoa_consultum.nome %>
+</p>
+
+<p>
+  <strong>Nome mae:</strong>
+  <%= @pessoa_consultum.nome_mae %>
+</p>
+
+<p>
+  <strong>Nome fantasia:</strong>
+  <%= @pessoa_consultum.nome_fantasia %>
+</p>
+
+<p>
+  <strong>Nascimento:</strong>
+  <%= @pessoa_consultum.nascimento %>
+</p>
+
+<p>
+  <strong>Fundacao:</strong>
+  <%= @pessoa_consultum.fundacao %>
+</p>
+
+<p>
+  <strong>Situacao rfb:</strong>
+  <%= @pessoa_consultum.situacao_rfb %>
+</p>
+
+<p>
+  <strong>Descricao rfb:</strong>
+  <%= @pessoa_consultum.descricao_rfb %>
+</p>
+
+<p>
+  <strong>Data situacao:</strong>
+  <%= @pessoa_consultum.data_situacao %>
+</p>
+
+<p>
+  <strong>Ocorrencias:</strong>
+  <%= @pessoa_consultum.ocorrencias %>
+</p>
+
+<p>
+  <strong>Valor total:</strong>
+  <%= @pessoa_consultum.valor_total %>
+</p>
+
+<p>
+  <strong>Pend inter:</strong>
+  <%= @pessoa_consultum.pend_inter %>
+</p>
+
+<p>
+  <strong>Pend int obs:</strong>
+  <%= @pessoa_consultum.pend_int_obs %>
+</p>
+
+<p>
+  <strong>Pend fin:</strong>
+  <%= @pessoa_consultum.pend_fin %>
+</p>
+
+<p>
+  <strong>Pend fin obs:</strong>
+  <%= @pessoa_consultum.pend_fin_obs %>
+</p>
+
+<p>
+  <strong>Pend bacen:</strong>
+  <%= @pessoa_consultum.pend_bacen %>
+</p>
+
+<p>
+  <strong>Pend bacen obs:</strong>
+  <%= @pessoa_consultum.pend_bacen_obs %>
+</p>
+
+<%= link_to 'Edit', edit_pessoa_consultum_path(@pessoa_consultum) %> |
+<%= link_to 'Back', pessoa_consulta_path %>
